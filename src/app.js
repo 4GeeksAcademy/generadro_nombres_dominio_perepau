@@ -1,11 +1,22 @@
-import "bootstrap";
-import "./style.css";
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];  
+let noun = ['jogger', 'racoon'];
+const dominio = ["com", "es", "io", "net"]; 
+
+const arr = [pronoun, adj, noun, dominio]; 
+
+console.log(arr);
+const generate = () => {
 
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+pronoun.forEach(el => {
+  adj.forEach(val => {
+    noun.forEach(item => {
+      dominio.forEach(i => {
+        console.log(`${el}${val}${item}.${i}`);
+      })
+    })
+  })
+})
+}
+generate()
